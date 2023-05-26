@@ -1,0 +1,182 @@
+/* fuentes  */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+/* estilos básicos para body */
+body{
+    font-family: 'Montserrat', sans-serif; 
+    background-color: #f6f6f3;
+    border:1px solid black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* contenedor principal */
+
+.contenedor-flex{
+    display: flex;
+}
+/* títulos */
+
+h1{
+    color:#6d708d;
+}
+
+h2{
+
+    margin:10px;
+}
+/* toggle switch */
+.contenedor-toggle{
+     display: flex;
+     justify-content:center;
+     align-items: center;
+     color:#6d708d;
+     margin-bottom:40px;
+     
+}
+
+.toggle-wraper{
+
+    padding-right: 17px;
+    padding-top: 3px;
+}
+
+.switch{
+    position:relative;
+    background-color:#9fa3ed ;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    border-radius: 20px;
+}
+
+.switch::after{
+    content:'';
+    width:30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+
+ #toggle:checked + .switch::after{
+    left: 30px;
+ }
+
+ #toggle:checked +.switch{
+    background-color: black;
+ }
+
+ #toggle{
+    transform:scale(0)
+ }
+
+
+/* tarjetas de precio contenedor principal */
+
+.contenedor-precio{
+    border: 1px solid firebrick;
+   width: 250px;
+   background-color:#fff;
+    padding: 30px;
+    margin: 10px 5px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(10,10,10,.5);
+
+}
+
+/* texto precio */
+
+.contenedor-precio p{
+    font-size: 32px;
+    margin: 0;
+    color:#484b5b;
+}
+/* oculta los precios mensuales */
+
+.precio-mensual{
+    display: none;
+}
+
+.mostrar .precio-anual{
+    display: none;
+}
+
+.mostrar .precio-mensual{
+    display: block;
+
+}
+
+
+/* descripcion de cada servicio */
+
+.contenedor-precio ul{
+    list-style:noe;
+    padding:0;
+    border-top: 1.5px solid blue;
+}
+
+.contenedor-precio li{
+    border-bottom: 1.5px solid #e7e7eb;
+    padding: 15px 0;
+
+}
+/* botones */
+.contenedor-precio button{
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    padding:10px;
+    letter-spacing: 1.5px;
+    color:#f3f3f3;
+    cursor: pointer;
+    background:linear-gradient(90deg,#9fa3ed,#6d71df);
+    border: 1px solid transparent;
+    font-size: small;
+}
+
+.contenedor-precio button:hover{
+    background:#fff;
+    color:#6d71df;
+     border-color:#6d71df;
+}
+/* estilos para la opcion profesional */
+
+
+.opcion-profesional{
+    transform: scale(1.1);
+    color:#fff;
+    background: linear-gradient(90deg,#9fa3ed,#6d71df);
+}
+
+.opcion-profesional p{
+    color:#fff;
+}
+/*boton opción profesional  */
+
+#boton-profesional{
+    background: #fff;
+     color:#6d71df;
+    border:1PX solid transparent;
+}
+#boton-profesional:hover{
+    border-color: #fff;
+    color: #fff;
+    background: linear-gradient(90deg,#9fa3ed,#6d71df);
+}
+/* media queries */
+
+@media(max-width:768px){
+    .contenedor-flex{
+        flex-direction: column;
+    }
+    .opcion-profesional{
+        transform: scale(1);
+    }
+
+}
